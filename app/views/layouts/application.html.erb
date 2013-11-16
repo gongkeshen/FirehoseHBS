@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width">
+
 </head>
 <body>
 
@@ -20,8 +22,9 @@
     </a>
      
     <!-- Be sure to leave the brand out there if you want it shown -->
-    <a class="brand" href="#">Firehose App</a>
-     
+    <!--- <a class="brand" href="#">Firehose App</a> -->
+  	<%= link_to('Firehoser', root_path, :class => 'brand') %>
+
     <!-- Everything you want hidden at 940px or less, place within here -->
     <div class="nav-collapse collapse">
     <!-- .nav, .navbar-search, .navbar-form, etc -->
