@@ -11,7 +11,8 @@
 
 		<br />
 		<h2>
-			Emotion: <%= pic.emotion %>
+			<!-- link to filter by all pics that has the motion that's the same as this emotion-->
+			Emotion: <%= link_to pic.emotion, pics_path(:emotion => pic.emotion) %>
 			<br />
 		
 			Learned: <%= pic.learned %>
@@ -22,5 +23,10 @@
 
 <div class="span6 offset3 text-center">
 	<%= link_to 'Launch Again', new_pic_path, :class => 'btn btn-warning btn-large' %>
+</div>
+
+<div class="span5 offset4 text-center">
+<iframe width="560" height="315" src="//www.youtube.com/embed/PB3RbO7updc" frameborder="0" allowfullscreen>
+</iframe>
 </div>
 

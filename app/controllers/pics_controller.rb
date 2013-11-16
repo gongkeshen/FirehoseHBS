@@ -4,9 +4,11 @@ class PicsController < ApplicationController
 # end
 
 	def index
-
-		@pics = Pic.all
-
+		if params[:emotion].present?
+			@pics = Pic.where(:emotion=>params[:emotion])
+		else
+			@pics = Pic.all
+		end
 	end
 
 	def new
