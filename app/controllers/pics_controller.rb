@@ -1,5 +1,8 @@
 class PicsController < ApplicationController
 
+# def edit
+# end
+
 	def index
 
 		@pics = Pic.all
@@ -14,7 +17,7 @@ class PicsController < ApplicationController
 
 	def create
 
-		@pic = Pic.create(pic_params)
+		@pic = Pic.create( pic_params )
 		redirect_to pics_path
 
 	end
@@ -23,7 +26,7 @@ class PicsController < ApplicationController
 
 
 	def pic_params
-		params.require(:pic).permit(:lesson, :emotion, :learned)
+		params.require(:pic).permit(:lesson, :image, :emotion, :learned)
 	end
 
 end
