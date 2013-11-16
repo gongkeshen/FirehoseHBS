@@ -32,11 +32,17 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# added for twitter styles
 gem "twitter-bootstrap-rails"
 
+# added for doing forms
 gem 'simple_form'
 
+# added for doing the photo upload
 gem 'carrierwave'
+
+# added for dealing with Amazon S3
+gem "fog", "~> 1.3.1"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
